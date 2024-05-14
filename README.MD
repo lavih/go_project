@@ -13,7 +13,9 @@
 3. allow clicking on an env and see the container images status
 -  add a 'check now' button
 
-4. integration with jenkins - show last build on this env? add 'update env' button to go to jenkins?
+4. integration with jenkins
+- show last build on the env, by whom and which products he updated
+- add 'update env' button to go to jenkins env_deploy job
 
 5. add a 'QA check' button to let the QA know via notification they can start checking (or even run auto sanity button?)
 
