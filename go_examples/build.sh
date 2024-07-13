@@ -1,0 +1,1 @@
+sudo podman build -f Dockerfile -t golang:1.22.3-alpine .

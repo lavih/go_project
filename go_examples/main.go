@@ -53,7 +53,6 @@ func main() {
 			} else {
 				FirstName = element
 			}
-			//fmt.Printf("Booking ID: %v Booked for %v\n", index,FirstName)
 			fmt.Printf("Booking ID: %v Booked for: %v\n", index,FirstName)
 		}
 		fmt.Println("================================================================================================")
@@ -74,23 +73,19 @@ func greetUsers(StoreName string,TicketRemain int,TicketCount uint) {
 }
 
 func getUserName() (map[string]string, error){
-		//var userName string
 		var err error
 		var userFullName = make(map[string]string)
 		// loop until the enterd username is acceptable
 		for {
 			// to allow users to enter first and last name together with space we need to use io package
 			reader := bufio.NewReader(os.Stdin)
-			//fmt.Printf("Please input your full name:\n")
-			//userName, err = reader.ReadString('\n')
-			//userName = strings.TrimSpace(userName) // Remove the newline character
 
 			fmt.Printf("Please input your full name:\n")
 			tmp, err := reader.ReadString('\n')
 			userFullName["firstName"] = strings.Fields(tmp)[0]
-			userFullName["firstName"] = strings.TrimSpace(userFullName["firstName"])
+			userFullName["firstName"] = strings.TrimSpace(userFullName["firstName"]) // Remove the newline character
 			userFullName["lastName"] = strings.Fields(tmp)[1]
-			userFullName["lastName"] = strings.TrimSpace(userFullName["lastName"])
+			userFullName["lastName"] = strings.TrimSpace(userFullName["lastName"]) // Remove the newline character
 
 			if err != nil {
 				fmt.Println("An error occurred when parsing user input:", err)
